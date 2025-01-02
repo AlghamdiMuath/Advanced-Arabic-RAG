@@ -16,12 +16,10 @@ def normalize_arabic(text):
     return text.strip()
 
 def tokenize_arabic(text):
-
     tokens = simple_word_tokenize(text)
     return tokens
 
 def chunk_text(tokens, chunk_size=512, overlap=50):
-
     chunks = []
     for i in range(0, len(tokens), chunk_size - overlap):
         chunk = tokens[i:i + chunk_size]
@@ -46,24 +44,21 @@ def handle_multilingual_queries(text, target_language='ar'):
     return text
 
 def process_document(document, document_name):
-
     preprocessed_chunks = preprocess_text(document)
     processed_data = []
     for i, chunk in enumerate(preprocessed_chunks):
         processed_data.append({
-            'document_name': document_name,
+            'document_name': document_name,  # Use the provided document_name
             'section': i,
             'text': ' '.join(chunk)
         })
     return processed_data
 
 def save_processed_data(processed_data, output_path):
-
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(processed_data, f, ensure_ascii=False, indent=4)
 
 def load_extracted_data(input_path):
-
     with open(input_path, 'r', encoding='utf-8') as f:
         extracted_data = json.load(f)
     return extracted_data
@@ -77,7 +72,8 @@ if __name__ == "__main__":
     all_processed_data = []
     for item in extracted_data:
         document_text = item['text']
-        document_name = item.get('document_name', 'unknown_document')
+        # Ensure the document name is taken from 'file_name'
+        document_name = item.get('file_name', 'unknown_document')  # Get file_name, default to 'unknown_document' if missing
         processed_data = process_document(document_text, document_name)
         all_processed_data.extend(processed_data)
 
