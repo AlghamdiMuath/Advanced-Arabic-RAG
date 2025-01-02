@@ -29,8 +29,9 @@ def extract_layout_metadata(image, use_easyocr=False):
         return {'message': 'EasyOCR doesn\'t provide detailed layout metadata directly'}
     else:
         # Extract layout metadata using pytesseract
-        data = pytesseract.image_to_data(image, output_type=Output.DICT)
-        return data
+        return {'message': 'Tesseract doesn\'t provide accurate layout metadata'}
+        # data = pytesseract.image_to_data(image, output_type=Output.DICT)
+        # return data
 
 def extract_content_from_pdf(pdf_path, use_easyocr=False):
     images = preprocess_pdf(pdf_path)
