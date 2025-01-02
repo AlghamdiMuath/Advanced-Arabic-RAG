@@ -2,3 +2,4 @@ venv/
 *.pyc
 info-and-arch
 *.json
+data
