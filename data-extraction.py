@@ -4,6 +4,7 @@ import easyocr
 from pdf2image import convert_from_path
 import json
 import numpy as np
+import os
 from PIL import Image
 
 def preprocess_pdf(pdf_path):
@@ -49,12 +50,22 @@ def save_extracted_data(extracted_data, output_path):
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(extracted_data, f, ensure_ascii=False, indent=4)
 
-# usage
-pdf_path = './AcademicRegulationsArabic_page1.pdf'
-output_path = 'extracted_data.json'
-extracted_data = extract_content_from_pdf(pdf_path, use_easyocr= [False, True][0]) 
+def process_folder(folder_path, use_easyocr=False):
+    all_extracted_data = []
+    for filename in os.listdir(folder_path):
+        if filename.endswith('.pdf'):
+            pdf_path = os.path.join(folder_path, filename)
+            extracted_data = extract_content_from_pdf(pdf_path, use_easyocr)
+            for data in extracted_data:
+                data['file_name'] = filename  # Add the file name to each chunk of data
+            all_extracted_data.extend(extracted_data)
+    return all_extracted_data
+
+# Example usage:
+folder_path = './data'  # Folder containing PDFs
+output_path = 'extracted_data.json'  # Single JSON file for all extracted data
+extracted_data = process_folder(folder_path, use_easyocr=False)
 save_extracted_data(extracted_data, output_path)
 
-
-#first ten letters of the output in the text element of the json
-# print(json.load(open('extracted_data.json', 'r', encoding='utf-8'))[0]['text'][:10])
+# First ten characters of the output in the text element of the JSON
+print(json.load(open('extracted_data.json', 'r', encoding='utf-8'))[0]['text'][:10])
