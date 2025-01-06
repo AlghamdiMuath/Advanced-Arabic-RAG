@@ -1,5 +1,51 @@
+# -----------------------
+# Python
+# -----------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+.env
+.venv/
 venv/
-*.pyc
-info-and-arch
-*.json
-data
+pip-wheel-metadata/
+
+# -----------------------
+# Logs
+# -----------------------
+*.log
+logs/
+
+# -----------------------
+# OS generated files
+# -----------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------
+# Docker
+# -----------------------
+*.swp
+docker-compose.override.yml
+docker-compose.*.yml
+
+# Ignore volumes and container data
+volumes/
+data/
+extracted_json/
+processed_chunks/
+
+# -----------------------
+# Jupyter Notebooks
+# -----------------------
+.ipynb_checkpoints
+
+# -----------------------
+# Misc
+# -----------------------
+*.bak
+*.orig
