@@ -1,0 +1,7 @@
+# Qdrant & OpenSearch clients
+qdrant-client==1.2.2
+opensearch-py==2.2.0
+
+# Transformers / PyTorch for embeddings & cross-encoder
+torch==1.13.1
+transformers==4.28.0

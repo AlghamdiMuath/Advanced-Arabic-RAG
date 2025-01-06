@@ -1,0 +1,12 @@
+# Torch / Transformers
+torch==1.13.1
+transformers==4.28.0
+
+# Qdrant client
+qdrant-client==1.2.2
+
+# Sentence Transformers (optional, if you prefer)
+# sentence-transformers==2.2.2
+
+# For reading JSON files, etc. (already in standard library, but included for completeness)
+tqdm==4.64.1
