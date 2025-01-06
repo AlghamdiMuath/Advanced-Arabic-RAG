@@ -36,7 +36,7 @@ docker-compose.*.yml
 # Ignore volumes and container data
 volumes/
 data/
-extracted_json/
+data_extraction_output/
 processed_chunks/
 
 # -----------------------
