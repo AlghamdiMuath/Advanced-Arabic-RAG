@@ -1,0 +1,1 @@
+paddleocr==2.6.0 pdfminer.six==20221105 opencv-python==4.7.0.68 tqdm==4.64.1
