@@ -30,7 +30,7 @@ import json
 import re
 from camel_tools.tokenizers.word import simple_word_tokenize
 
-INPUT_FOLDER = "/path/to/extracted_json"
+INPUT_FOLDER = "/output_json/mulitple-jsons"
 OUTPUT_FOLDER = "/path/to/processed_chunks"
 
 CHUNK_SIZE = 512
