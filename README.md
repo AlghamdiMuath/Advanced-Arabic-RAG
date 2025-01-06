@@ -37,7 +37,7 @@ The system is designed to ingest, extract, process, and embed Arabic documents�
 └── README.md                     # This file
 Note: The individual .md files (e.g., DATA_EXTRACTION_SERVICE.md) inside the info-and-arch contain more technical details and instructions to help developers implement each microservice.
 
-
+```
 ---
 Getting Started
 Clone the Repo
