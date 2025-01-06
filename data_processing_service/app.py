@@ -132,7 +132,7 @@ def process_single_json(json_path: str) -> str:
     filename = data.get("filename", "unknown_file")
 
     for i, chunk in enumerate(text_chunks):
-        record_id = f"{base_id}_chunk_{i}"
+        record_id = str(uuid.uuid4())
         record = {
             "id": record_id,
             "text": chunk,
