@@ -97,7 +97,6 @@ def dense_search(query: str, top_k: int = TOP_K) -> List[Dict[str, Any]]:
     results = []
     for point in search_result:
         payload = point.payload or {}
-        print(payload)
         text_val = payload.get("text", None)  # If you stored text in the payload, or store it differently
         score = point.score
         results.append({
