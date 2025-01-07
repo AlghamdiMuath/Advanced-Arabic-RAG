@@ -162,8 +162,8 @@ class ExtractionResponse(BaseModel):
     metadata: dict
     tables: Optional[List[dict]] = None
 
-# We’ll unify “file upload” and “folder processing” in a single endpoint for demonstration.
-# In a real project, you might separate them.
+#“file upload” and “folder processing” in a single endpoint for demonstration.
+#you might separate them.
 
 # ---------------------- FASTAPI ROUTES ----------------------
 @app.get("/health")

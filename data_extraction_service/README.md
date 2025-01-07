@@ -15,10 +15,11 @@ This microservice provides functionality to extract text from PDF documents, inc
 ```bash
 git clone https://github.com/AlghamdiMuath/advanced-arabic-rag
 ```
+2. Then
 ```bash
 cd advanced-arabic-rag/data_extraction_service
 ```
-2. Install the required dependencies:
+3. Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
