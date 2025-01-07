@@ -1,6 +1,5 @@
 # Retrieval service
 
-## Overview
 This microservice performs hybrid search **(only dense for now)** for Arabic text by combining dense semantic search using Qdrant, sparse keyword search using OpenSearch, and re-ranking results with a cross-encoder model.
 
 ## Features
@@ -39,7 +38,7 @@ Ensure Qdrant is running:
 ## Usage
 ### Running the Service
 - 1. Modify the script if needed to adjust parameters like TOP_K and FINAL_TOP_N.
-- 2. Run the script to perform hybrid search:
+- 2. Run the script to perform dense search:
 ```bash
 python app.py
 ```
@@ -78,6 +77,6 @@ Metadata: {...}
 ```
 
 ## Notes
-- Ensure all models and services (Qdrant) are correctly installed and running.
 - **Replace the re-rank model with a suitable Arabic cross-encoder for better results.**
+- Ensure all models and services (Qdrant) are correctly installed and running.
 - The script is optimized for GPU but will fallback to CPU if no GPU is available.
