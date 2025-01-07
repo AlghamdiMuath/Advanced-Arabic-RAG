@@ -3,7 +3,7 @@
 Handles the actual RAG pipeline step:
 1. Receives a user query.
 2. Calls `04_Retrieval_Service` to get top relevant chunks.
-3. Feeds retrieved context + user query into a local LLM.
+3. Feeds TOP 3 retrieved context + user query into a local LLM (both are part of a fitting prompt template).
 4. Returns a natural-language answer.
 
 ## Directory Structure
@@ -15,6 +15,7 @@ llm_generation_service/ ├── requirements.txt ├── app.py └── RE
 
 - `transformers`
 - The local LLM model weights (LLaMA-2, BloomZ, or JAIS)
+- for the sake of immediate testing use OPENAI API
 
 ## Example `app.py`
 
