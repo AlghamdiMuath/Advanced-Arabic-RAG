@@ -1,15 +1,2 @@
-# Core
-tqdm==4.64.1
-
-# Arabic Processing
-camel-tools==1.3.0
-# Or if you prefer Farasa, do:
-# farasapy==0.0.14
-
-# For parallelization (built into Python, no extra library needed, but including just in case)
-multiprocessing-logging==0.3.1
-
-# If you need advanced text cleaning
-regex==2022.10.31
-nltk==3.7
-unidecode==1.3.6
+camel_tools==1.5.5
+tqdm==4.67.1
