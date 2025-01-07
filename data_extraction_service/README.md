@@ -12,6 +12,12 @@ This microservice provides functionality to extract text from PDF documents, inc
 ## Installation
 
 1. Clone the repository and navigate to the directory containing this microservice.
+```bash
+git clone https://github.com/AlghamdiMuath/advanced-arabic-rag
+```
+```bash
+cd advanced-arabic-rag/data_extraction_service
+```
 2. Install the required dependencies:
 
 ```bash
@@ -72,16 +78,6 @@ uvicorn app:app --host 0.0.0.0 --port 8000
 
 ## Example CLI Usage(Run locally) 
 To process all PDFs in the `./data` folder without using the API:
-
-```bash
-git clone https://github.com/AlghamdiMuath/advanced-arabic-rag
-```
-```bash
-cd advanced-arabic-rag/data_extraction_service
-```
-```bash
-pip install -r requirements.txt
-```
 ```bash
 python app.py
 ```
