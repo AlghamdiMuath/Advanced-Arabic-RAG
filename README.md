@@ -56,7 +56,7 @@ Below is the directory structure, where each microservice has its dedicated fold
 - Combines all services for a seamless RAG pipeline.
 
 ## Getting Started
-### 1. 1. Clone the Repository
+### 1. sClone the Repository
 ```bash
 git clone https://github.com/AlghamdiMuath/Advanced-Arabic-RAG.git
 cd Advanced-Arabic-RAG
@@ -81,31 +81,31 @@ pip install -r requirements.txt
 ### Option 1: Running Services Manually
 Start services individually in the following order:
 
-- 1. _data_extraction_service_: Extract text from PDFs.
-- 2. _data_processing_service_: Process and chunk the extracted text.
-- 3. _embedding_service_: Embed the chunks and store them in Qdrant (follow the steps for running the qdrant server).
-- 4. _retrieval_service_: Enable context retrieval.
-- 5. _llm_generation_service_: Generate answers using retrieved context.
-- 6. _rag_api_service_: Launch the unified API for user queries.
+1. _data_extraction_service_: Extract text from PDFs.
+2. _data_processing_service_: Process and chunk the extracted text.
+3. _embedding_service_: Embed the chunks and store them in Qdrant (follow the steps for running the qdrant server).
+4. _retrieval_service_: Enable context retrieval.
+5. _llm_generation_service_: Generate answers using retrieved context.
+6. _rag_api_service_: Launch the unified API for user queries.
 
 ## Testing Guidelines
 ### Testing Each Service
 To test services independently:
-- 1. Navigate to the service folder:
+1. Navigate to the service folder:
 ```bash
 cd <service_directory>
 ```
-- 2. Follow the specific instructions in its **README.md**.
+2. Follow the specific instructions in its **README.md**.
 
 ## Integrated Workflow
-- 1. Start the rag_api_service:
+1. Start the rag_api_service:
 ```bash
 
 cd rag_api_service
 uvicorn app:app --host 0.0.0.0 --port 8000
 ```
 
-- 2. Send a query to the /query endpoint:
+2. Send a query to the /query endpoint:
 ```bash
 
 {
