@@ -56,7 +56,7 @@ Below is the directory structure, where each microservice has its dedicated fold
 - Combines all services for a seamless RAG pipeline.
 
 ## Getting Started
-### 1. sClone the Repository
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/AlghamdiMuath/Advanced-Arabic-RAG.git
 cd Advanced-Arabic-RAG
