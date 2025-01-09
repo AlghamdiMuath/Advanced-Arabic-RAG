@@ -35,9 +35,9 @@ OPENAI_API_KEY="your_openai_api_key"
 - 2. The service will:
 - - Retrieve the top N relevant context chunks using the Retrieval Service, then rerank it (quality of reranking depends on the model selection in retrieval service).
 
-- -Use the OpenAI API to generate a context-aware answer in Arabic.
+- 3. Use the OpenAI API to generate a context-aware answer in Arabic.
 
-- 3. Service Run command:
+- 4. Service Run command:
 ```bash
 python app.py
 ```
@@ -68,9 +68,5 @@ python app.py
 - OpenAI API key is required to use the ChatCompletion endpoint.
 - Replace the model name (gpt-3.5-turbo) with gpt-4 if access is available for higher quality answers.
 ## Dependencies
-- run:
-```bash
-- **pip install requirements.txt**
-```
 - retrieval_service (from the same repository)
 ### Compatible with other services in the advanced-arabic-rag project.
