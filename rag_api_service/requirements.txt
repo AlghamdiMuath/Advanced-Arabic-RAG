@@ -1,0 +1,6 @@
+fastapi==0.115.6
+uvicorn==0.34.0
+
+# from llm_generation_service/requirements.txt
+openai==1.59.5
+python-dotenv==1.0.1
