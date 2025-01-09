@@ -4,4 +4,4 @@ opensearch-py==2.2.0
 
 # Transformers / PyTorch for embeddings & cross-encoder
 torch==1.13.1
-transformers==4.28.0
+transformers>=4.38.0
