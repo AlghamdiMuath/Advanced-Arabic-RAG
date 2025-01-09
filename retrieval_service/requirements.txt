@@ -3,5 +3,5 @@ qdrant_client==1.12.5
 opensearch-py==2.2.0
 
 # Transformers / PyTorch for embeddings & cross-encoder
-torch==1.13.1
+torch==2.5.1+cu124
 transformers>=4.38.0
