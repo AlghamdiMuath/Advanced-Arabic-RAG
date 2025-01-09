@@ -1,0 +1,52 @@
+# Consolidated requirements for all services in Advanced-Arabic-RAG
+
+# ------------------------------
+# Libraries used in multiple services
+# ------------------------------
+# Used in: Data Extraction, RAG API Service
+fastapi==0.115.6
+
+# Used in: Data Extraction, RAG API Service
+uvicorn==0.34.0
+
+# Used in: Data Extraction, Data Processing, Embedding Service
+tqdm==4.67.1
+
+# Used in: LLM Generation Service, RAG API Service
+openai==1.59.5
+
+# Used in: LLM Generation Service, RAG API Service
+python-dotenv==1.0.1
+
+# Used in: Embedding Service, Retrieval Service
+torch==2.5.1
+
+# Used in: Embedding Service, Retrieval Service
+transformers==4.43.4
+
+# ------------------------------
+# Data Extraction Service
+# ------------------------------
+pydantic==2.10.4
+numpy==1.26.4
+opencv-python==4.10.0.84
+Pillow==11.0.0
+PyMuPDF==1.25.1
+pdf2image==1.17.0
+pytesseract==0.3.13
+
+# ------------------------------
+# Data Processing Service
+# ------------------------------
+camel_tools==1.5.5
+
+# ------------------------------
+# Embedding Service
+# ------------------------------
+qdrant_client==1.12.5
+
+# ------------------------------
+# Retrieval Service
+# ------------------------------
+qdrant-client==1.2.2
+opensearch-py==2.2.0
