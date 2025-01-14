@@ -18,7 +18,6 @@ Below is the directory structure, where each microservice has its dedicated fold
 ├── retrieval_service/             # Handles dense retrieval from Qdrant
 ├── llm_generation_service/        # Generates answers using retrieved context
 ├── rag_api_service/               # Unified API interface for the RAG pipeline
-├── docker-compose.yml             # Example Docker Compose setup
 ├── .gitignore                     # Git ignore rules
 └── README.md                      # General project documentation (this file)
 ```
